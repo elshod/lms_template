@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .active-link img,
+        .hover-img:hover img {
+          filter: brightness(0) invert(1);
+        }
+        .active-link {
+          background-color: #4cbc9a;
+          color: #fff;
+        }
+        .hover-btn:hover > *:not(img) {
+          background-color: #fff;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            
+            "2xl": { min: "1535px" },
+            xl: { max: "1279px" },
+            lg: { max: "1023px" },
+            md: { max: "767px" },
+            sm: { max: "639px" },
+          },
+          extend: {
+            boxShadow: {
+              btnshadow: "0 20px 50px 0px rgba(55,69,87,0.1)",
+            },
+            colors: {
+              green: "#4CBC9A",
+              colorgray: "#FAFAFA",
+              ccyan: "#3CC2E0",
+              gviolet: "#A098AE",
+              qora: "#363B64",
+              cblack: "#374557",
+              cyellow: "#FEC64F",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main
+      class="select-none flex h-screen w-screen poppins-regular overflow-hidden bg-colorgray"
+    >
+      <aside
+        class="bg-white w-[345px] xl:w-[300px] xl:px-[20px] h-screen px-[46px] py-8"
+      >
+        <a href="#" class="block text-center text-4xl poppins-bold text-qora">
+          <span class="text-green text-[40px]">LMS</span> admin
+        </a>
+        <div class="flex flex-col gap-4 mt-[85px] xl:mt-[20px] xl:gap-2">
+          <a
+            href="#"
+            class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white active-link hover-img xl:py-2 xl:px-4"
+          >
+            <img src="./img/apps.svg" alt="" />
+            Bosh sahifa
+          </a>
+          <a
+            href="#"
+            class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover-img xl:py-2 xl:px-4"
+          >
+            <img src="./img/open-book.svg" alt="" />
+            Fakultetlar
+          </a>
+          <a
+            href="#"
+            class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover-img xl:py-2 xl:px-4"
+          >
+            <img src="./img/calendar.svg" alt="" />
+            Darslar
+          </a>
+          <a
+            href="#"
+            class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover-img xl:py-2 xl:px-4"
+          >
+            <img src="./img/calendar.svg" alt="" />
+            Xodimlar
+          </a>
+          <a
+            href="#"
+            class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover-img xl:py-2 xl:px-4"
+          >
+            <img src="./img/calendar.svg" alt="" />
+            Talabalar
+          </a>
+          <a
+            href="#"
+            class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover-img xl:py-2 xl:px-4"
+          >
+            <img src="./img/calendar.svg" alt="" />
+            Topshiriqlar
+          </a>
+          <a
+            href="#"
+            class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover-img xl:py-2 xl:px-4"
+          >
+            <img src="./img/calendar.svg" alt="" />
+            Buxgalteriya
+          </a>
+          <a
+            href="#"
+            class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover-img xl:py-2 xl:px-4"
+          >
+            <img src="./img/calendar.svg" alt="" />
+            Hujjatlar
+          </a>
+        </div>
+      </aside>
+      <section class="flex-1 h-screen flex flex-col">
+        <header class="py-[30px] pl-10 pr-[50px] bg-white flex items-center">
+          <div class="poppins-bold text-4xl">Courses</div>
+          <form
+            class="flex ml-[191px] gap-2 py-[14px] px-6 bg-colorgray rounded-2xl"
+          >
+            <img src="./img/search.svg" alt="" />
+            <input
+              type="text"
+              placeholder="Kalit so’z bo’yicha qidiruv"
+              class="bg-colorgray w-[425px] text-lg focus:outline-0"
+            />
+          </form>
+          <div class="flex ml-auto gap-2">
+            <button
+              class="relative hover:bg-green hover:text-white rounded-lg hover-btn rounded-2xl hover-img size-[60px] flex items-center justify-center"
+            >
+              <span
+                class="size-2 bg-green hover:bg-white rounded absolute right-2.5 top-2.5"
+              ></span>
+              <img src="./img/chat.svg" alt="" />
+            </button>
+            <button
+              class="relative hover:bg-green hover:text-white rounded-lg hover-btn rounded-2xl hover-img size-[60px] flex items-center justify-center"
+            >
+              <span
+                class="size-2 bg-green hover:bg-white rounded absolute right-2.5 top-2.5"
+              ></span>
+              <img src="./img/bell.svg" alt="" />
+            </button>
+            <a
+              href="#"
+              class="relative hover:bg-green hover:text-white rounded-lg rounded-2xl hover-img size-[60px] flex items-center justify-center"
+            >
+              <img src="./img/settings.svg" alt="" />
+            </a>
+            <a
+              href="#"
+              class="relative rounded-2xl overflow-hidden ml-4 size-[60px] flex items-center justify-center"
+            >
+              <img src="./img/photo1.jpg" alt="" class="" />
+            </a>
+          </div>
+        </header>
+        <section class="flex-1 overflow-auto p-10">
+            <div class="flex items-center justify-between mb-6">
+                <div class="text-2xl poppins-bold text-cblack">
+                    Popular This Week
+                </div>
+                <a href="#" class="text-green flex gap-2">
+                    Barchasi <img src="./img/right.svg" alt="">
+                </a>
+            </div>
+
+            <div class="flex gap-4 mb-10">
+                <a href="#" class="flex-1 rounded-2xl bg-white py-[28px] pr-6 pl-8 flex">
+                    <img src="./img/palette.svg" alt="" class="mr-6">
+                    <p class="flex flex-col text-lg text-cblack poppins-medium">
+                        Graphic Design
+                        <span class="text-sm text-gviolet poppins-regular">Lorem ipsum dolor sit amet</span>
+                    </p>
+                    <img src="./img/right.svg" alt="" class="ml-auto">
+                </a>    
+                <a href="#" class="flex-1 rounded-2xl bg-white py-[28px] pr-6 pl-8 flex">
+                    <img src="./img/palette.svg" alt="" class="mr-6">
+                    <p class="flex flex-col text-lg text-cblack poppins-medium">
+                        Graphic Design
+                        <span class="text-sm text-gviolet poppins-regular">Lorem ipsum dolor sit amet</span>
+                    </p>
+                    <img src="./img/right.svg" alt="" class="ml-auto">
+                </a>    
+                <a href="#" class="flex-1 rounded-2xl bg-white py-[28px] pr-6 pl-8 flex">
+                    <img src="./img/palette.svg" alt="" class="mr-6">
+                    <p class="flex flex-col text-lg text-cblack poppins-medium">
+                        Graphic Design
+                        <span class="text-sm text-gviolet poppins-regular">Lorem ipsum dolor sit amet</span>
+                    </p>
+                    <img src="./img/right.svg" alt="" class="ml-auto">
+                </a>    
+                <a href="#" class="flex-1 rounded-2xl bg-white py-[28px] pr-6 pl-8 flex">
+                    <img src="./img/palette.svg" alt="" class="mr-6">
+                    <p class="flex flex-col text-lg text-cblack poppins-medium">
+                        Graphic Design
+                        <span class="text-sm text-gviolet poppins-regular">Lorem ipsum dolor sit amet</span>
+                    </p>
+                    <img src="./img/right.svg" alt="" class="ml-auto">
+                </a>    
+            </div>
+
+            <div class="flex items-center justify-between mb-6">
+                <div class="text-2xl poppins-bold text-cblack">
+                    All Courses
+                </div>
+                <a href="#" class="text-green flex gap-2">
+                    Barchasi <img src="./img/right.svg" alt="">
+                </a>
+            </div>
+            <div class="flex flex-wrap -ml-5 -mr-5">
+                <div class="basis-1/3 p-5">
+                    <div class="bg-white rounded-2xl p-6">
+                        <a href="#" class="rounded-2xl flex overflow-hidden">
+                            <img src="./img/picture.jpg" alt="" class="w-full object-cover h-[240px]">
+                        </a>
+                        <a href="#" class="block mt-6 text-2xl poppins-bold mb-1">
+                            Fullstack Developer
+                        </a>
+                        <div class="flex text-gviolet text-sm whitespace-nowrap	">
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/account.svg" alt="" class="size-[21px]">
+                                A. Elshod
+                            </div>
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/open-book.svg" alt="" class="size-[21px]">
+                                8 oy
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./img/calendar.svg" alt="" class="size-[21px]">
+                                25 ta
+                            </div>
+
+                        </div>
+                        <div class="flex justify-between items-end mt-2">
+                            <div class="text-base poppins-bold text-cblack">
+                                <span class="text-green text-2xl">800 000</span> so’m/oy
+                            </div>
+                            <a href="#" class="text-green text-base">
+                                Batafsil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-1/3 p-5">
+                    <div class="bg-white rounded-2xl p-6">
+                        <a href="#" class="rounded-2xl flex overflow-hidden">
+                            <img src="./img/picture.jpg" alt="">
+                        </a>
+                        <a href="#" class="block mt-6 text-2xl poppins-bold mb-1">
+                            Fullstack Developer
+                        </a>
+                        <div class="flex text-gviolet text-sm whitespace-nowrap	">
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/account.svg" alt="" class="size-[21px]">
+                                A. Elshod
+                            </div>
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/open-book.svg" alt="" class="size-[21px]">
+                                8 oy
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./img/calendar.svg" alt="" class="size-[21px]">
+                                25 ta
+                            </div>
+
+                        </div>
+                        <div class="flex justify-between items-end mt-2">
+                            <div class="text-base poppins-bold text-cblack">
+                                <span class="text-green text-2xl">800 000</span> so’m/oy
+                            </div>
+                            <a href="#" class="text-green text-base">
+                                Batafsil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-1/3 p-5">
+                    <div class="bg-white rounded-2xl p-6">
+                        <a href="#" class="rounded-2xl flex overflow-hidden">
+                            <img src="./img/picture.jpg" alt="">
+                        </a>
+                        <a href="#" class="block mt-6 text-2xl poppins-bold mb-1">
+                            Fullstack Developer
+                        </a>
+                        <div class="flex text-gviolet text-sm whitespace-nowrap	">
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/account.svg" alt="" class="size-[21px]">
+                                A. Elshod
+                            </div>
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/open-book.svg" alt="" class="size-[21px]">
+                                8 oy
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./img/calendar.svg" alt="" class="size-[21px]">
+                                25 ta
+                            </div>
+
+                        </div>
+                        <div class="flex justify-between items-end mt-2">
+                            <div class="text-base poppins-bold text-cblack">
+                                <span class="text-green text-2xl">800 000</span> so’m/oy
+                            </div>
+                            <a href="#" class="text-green text-base">
+                                Batafsil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-1/3 p-5">
+                    <div class="bg-white rounded-2xl p-6">
+                        <a href="#" class="rounded-2xl flex overflow-hidden">
+                            <img src="./img/picture.jpg" alt="">
+                        </a>
+                        <a href="#" class="block mt-6 text-2xl poppins-bold mb-1">
+                            Fullstack Developer
+                        </a>
+                        <div class="flex text-gviolet text-sm whitespace-nowrap	">
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/account.svg" alt="" class="size-[21px]">
+                                A. Elshod
+                            </div>
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/open-book.svg" alt="" class="size-[21px]">
+                                8 oy
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./img/calendar.svg" alt="" class="size-[21px]">
+                                25 ta
+                            </div>
+
+                        </div>
+                        <div class="flex justify-between items-end mt-2">
+                            <div class="text-base poppins-bold text-cblack">
+                                <span class="text-green text-2xl">800 000</span> so’m/oy
+                            </div>
+                            <a href="#" class="text-green text-base">
+                                Batafsil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-1/3 p-5">
+                    <div class="bg-white rounded-2xl p-6">
+                        <a href="#" class="rounded-2xl flex overflow-hidden">
+                            <img src="./img/picture.jpg" alt="">
+                        </a>
+                        <a href="#" class="block mt-6 text-2xl poppins-bold mb-1">
+                            Fullstack Developer
+                        </a>
+                        <div class="flex text-gviolet text-sm whitespace-nowrap	">
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/account.svg" alt="" class="size-[21px]">
+                                A. Elshod
+                            </div>
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/open-book.svg" alt="" class="size-[21px]">
+                                8 oy
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./img/calendar.svg" alt="" class="size-[21px]">
+                                25 ta
+                            </div>
+
+                        </div>
+                        <div class="flex justify-between items-end mt-2">
+                            <div class="text-base poppins-bold text-cblack">
+                                <span class="text-green text-2xl">800 000</span> so’m/oy
+                            </div>
+                            <a href="#" class="text-green text-base">
+                                Batafsil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-1/3 p-5">
+                    <div class="bg-white rounded-2xl p-6">
+                        <a href="#" class="rounded-2xl flex overflow-hidden">
+                            <img src="./img/picture.jpg" alt="">
+                        </a>
+                        <a href="#" class="block mt-6 text-2xl poppins-bold mb-1">
+                            Fullstack Developer
+                        </a>
+                        <div class="flex text-gviolet text-sm whitespace-nowrap	">
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/account.svg" alt="" class="size-[21px]">
+                                A. Elshod
+                            </div>
+                            <div class="flex items-center after:content-[''] after:w-1 after:h-1 after:block after:bg-gray-400 after:rounded after:mx-2 white gap-2">
+                                <img src="./img/open-book.svg" alt="" class="size-[21px]">
+                                8 oy
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./img/calendar.svg" alt="" class="size-[21px]">
+                                25 ta
+                            </div>
+
+                        </div>
+                        <div class="flex justify-between items-end mt-2">
+                            <div class="text-base poppins-bold text-cblack">
+                                <span class="text-green text-2xl">800 000</span> so’m/oy
+                            </div>
+                            <a href="#" class="text-green text-base">
+                                Batafsil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
